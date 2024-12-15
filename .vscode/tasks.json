@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build with Makefile",
+            "type": "shell",
+            "command": "make",
+            "args": ["rtracer"],                          // Argomenti di make
+            "group": {
+                "kind": "build",
+                "isDefault": true                // Imposta come build predefinita
+            },
+            "problemMatcher": ["$gcc"],          // Problemi compatibili con GCC
+            "detail": "Compila il progetto usando il Makefile e GCC"
+        }
+    ]
+}

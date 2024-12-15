@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run and Debug Executable",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/rtracer", // Modifica con il percorso corretto del tuo eseguibile
+            "args": [],                          // Argomenti da passare al programma
+            "stopAtEntry": true,                //  fermarsi all'inizio del programma
+            "cwd": "${workspaceFolder}",         // Directory di lavoro
+            "environment": [],
+            "externalConsole": false,            // Usa il terminale interno di VSCode
+            "MIMode": "gdb",                     // Usa GDB come debugger
+            "miDebuggerPath": "/usr/bin/gdb",    // Percorso di GDB (di default per GCC)
+            "setupCommands": [
+                {
+                    "description": "Abilita la formattazione per GDB",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build with Makefile" // Esegui "make" prima di avviare il debugger
+        }
+    ]
+}
