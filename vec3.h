@@ -8,8 +8,10 @@
 #include "ray.h"
 
 vec3 *add(vec3 *one, vec3 *two);
+vec3 *sum(vec3 *one, double two);
 vec3 *subtract(vec3 *one, vec3 *two);
 vec3 *multiply(vec3 *one, double two);
+vec3 *mul(vec3 *one, vec3 *two);
 vec3 *divide(vec3 *one, double two);
 double length(vec3 *one);
 bool near_zero( vec3 *v);
@@ -24,4 +26,5 @@ vec3 *reflect( vec3 *v,  vec3 *n);
 vec3 *refract( vec3 *uv,  vec3 *n, double etai_over_etat);
 double length_squared( vec3 *one);
 void write_color(FILE* out, vec3 pixel_color);
+double dot(vec3 *u, vec3 *v);
 #endif
