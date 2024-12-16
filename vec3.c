@@ -8,6 +8,14 @@ vec3 *add(vec3 *one, vec3 *two)
     result->z = one->z + two->z;
     return result;
 }
+vec3 *sum(vec3 *one, double two)
+{
+    vec3 *result = (vec3 *)malloc(sizeof(vec3));
+    result->x = one->x + two;
+    result->y = one->y + two;
+    result->z = one->z + two;
+    return result;
+}
 vec3 *subtract(vec3 *one, vec3 *two)
 {
     vec3 *result = (vec3 *)malloc(sizeof(vec3));
@@ -22,6 +30,14 @@ vec3 *multiply(vec3 *one, double two)
     result->x = one->x * two;
     result->y = one->y * two;
     result->z = one->z * two;
+    return result;
+}
+vec3 *mul(vec3 *one, vec3 *two)
+{
+    vec3 *result = (vec3 *)malloc(sizeof(vec3));
+    result->x = one->x * two->x;
+    result->y = one->y * two->y;
+    result->z = one->z * two->z;
     return result;
 }
 vec3 *divide(vec3* one, double two)
